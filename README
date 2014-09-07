@@ -1,0 +1,23 @@
+Ten-Young Guh
+tguh3
+
+To enable the extra credit predictor,
+add the "-e" option before the input filename:
+	./predictors -e <input-filename> <output-filename>
+
+What works:
+* All required predictors
+* The extra credit predictor
+
+Interesting things:
+* To test all the sample traces at once,
+  I wrote a Python script, tester.py,
+  to run my program and diff the output with the expected output,
+  concurrently per trace.
+* The gshare and tournament predictors are really just variations of the bimodal predictor.
+  You can even implement the gshare predictor as just a wrapper around a bimodal predictor.
+* Like old C arrays, the C++11 standard library arrays can still be uninitialized if of arithmetic type.
+* Initializing a vector of unique pointers is a pain in the ass.
+* Using templates to remove boilerplate can create a net increase in boilerplate:
+  the original boilerplate may be gone
+  but creating the necessary templates can create more boilerplate.
